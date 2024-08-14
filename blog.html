@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Hub Blog</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        article {
+            background: white;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>University Hub Blog</h1>
+  <header>
+      <div class="navbar">
+    <a href="sabout.html" id="sabout">about</a>
+
+       <a href="saddmission.html" id="saddmission">addmission</a>
+      <a href="scontact.html" id="scontact">contactme</a>
+      <a href="scourse.html" id="scourse">course</a>
+
+        <a href="sevent.html" id="sevent">event</a>
+      <a href="sblog.html" id="sblog">blog</a>
+          <a href="sregister.html" id="sregister">register</a>
+      <a href="ssignin.html" id="ssignin">sign_in</a>
+      <a href="sforget.html" id="sforget">forget</a>
+
+        
+   </div> 
+</header>
+    </header>
+    <main id="posts"></main>
+    <footer>
+        <p>&copy; 2024 University Hub Blog</p>
+    </footer>
+    <script>
+        // JavaScript Code
+        document.addEventListener('DOMContentLoaded', () => {
+            const posts = [
+                {
+                    title: "Welcome to University Hub",
+                    content: "This is the first post. Welcome to our blog where we share the latest updates and events happening at the university."
+                },
+                {
+                    title: "Upcoming Events",
+                    content: "Join us for the upcoming university events including workshops, seminars, and cultural programs. Stay tuned for more updates!"
+                },
+                {
+                    title: "Student Achievements",
+                    content: "We are proud to announce the achievements of our students in various competitions and events. Congratulations to all!"
+                },
+                {
+                    title: "New Courses Available",
+                    content: "Check out the new courses being offered this semester. Don't miss the chance to enhance your skills and knowledge."
+                },
+                {
+                    title: "Campus Life",
+                    content: "Explore the vibrant campus life at University Hub, filled with activities, clubs, and opportunities to connect with fellow students."
+                }
+            ];
+
+            const postsContainer = document.getElementById('posts');
+            posts.forEach(post => {
+                const postElement = document.createElement('article');
+                postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+                postsContainer.appendChild(postElement);
+            });
+        });
+    </script>
+</body>
+</html>

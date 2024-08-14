@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Hub - Forgot Password</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>University Hub</h1>
+            <a href="sabout.html" id="sabout">about</a>
+
+       <a href="saddmission.html" id="saddmission">addmission</a>
+      <a href="scontact.html" id="scontact">contactme</a>
+      <a href="scourse.html" id="scourse">course</a>
+
+        <a href="sevent.html" id="sevent">event</a>
+      <a href="sblog.html" id="sblog">blog</a>
+          <a href="sregister.html" id="sregister">register</a>
+      <a href="ssignin.html" id="ssignin">sign_in</a>
+      <a href="forget.html" id="sforget">forget</a>
+
+        
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Reset Password</h2>
+            <form id="forgotPasswordForm">
+                <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                <button type="submit">Forget</button>
+            </form>
+            <div id="confirmationMessage" style="display: none; text-align: center; margin-top: 20px;">
+                <p>A reset link has been sent to your email. Please check your inbox.</p>
+                <p>Return to <a href="signin.html">Sign In</a></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 University Hub</p>
+    </footer>
+    
+    <script>
+        // JavaScript Code
+        document.getElementById('forgotPasswordForm').addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the default form submission
+
+            const email = document.getElementById('forgotEmail').value;
+
+            // Simulate sending a reset link (in a real application, you would send this to your server)
+            console.log('Reset link to:', email);
+            
+            // Show confirmation message and hide the form
+            document.getElementById('forgotPasswordForm').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Reset the form (optional, since we hide it)
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>

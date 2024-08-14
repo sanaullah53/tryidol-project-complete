@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Form</title>
+      <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        header {
+            background: green;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 0px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 1000%;
+            padding: 2px;
+            margin-bottom: 1px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border: 1px solid #007BFF;
+            outline: none;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: red;
+            padding: 12px;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            width: 1000%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: red;
+            color: green;
+            position: relative;
+            bottom: 0;
+            width: 1000%;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: red;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="file"] {
+            padding: 10px;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <div class="navbar">
+<a href="sabout.html" id="sabout">about</a>
+
+       <a href="saddmission.html" id="saddmission">addmission</a>
+      <a href="scontact.html" id="scontact">contactme</a>
+      <a href="scourse.html" id="scourse">course</a>
+
+        <a href="sevent.html" id="sevent">event</a>
+      <a href="sblog.html" id="sblog">blog</a>
+          <a href="sregister.html" id="sregister">register</a>
+      <a href="ssignin.html" id="ssignin">sign_in</a>
+      <a href="sforget.html" id="sforget">forget</a>
+
+        
+   </div> 
+</header>
+    <h2>University Admission Form</h2>
+    <form id="admissionForm">
+        <div class="error" id="errorMessage"></div>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Permanent Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="course">Course Applied:</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="engineering">Engineering</option>
+            <option value="business">Business</option>
+            <option value="arts">Arts</option>
+            <option value="science">Science</option>
+        </select>
+
+        <label for="highschool">High School Name:</label>
+        <input type="text" id="highschool" name="highschool" required>
+
+        <label for="gpa">High School GPA:</label>
+        <input type="number" id="gpa" name="gpa" step="0.01" required>
+
+        <label for="transcript">Upload Transcript:</label>
+        <input type="file" id="transcript" name="transcript" accept=".pdf,.jpg,.png" required>
+
+        <label for="statement">Personal Statement:</label>
+        <textarea id="statement" name="statement" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Clear previous error messages
+            document.getElementById('errorMessage').textContent = '';
+
+            // Validate form fields
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            if (!name || !email || !phone) {
+                document.getElementById('errorMessage').textContent = 'Please fill in all required fields.';
+                return;
+            }
+
+            // If validation is successful, you can submit the form data
+            alert('Form submitted successfully!');
+            // Here you can add code to send the form data to the server
+        });
+    </script>
+</body>
+</html>

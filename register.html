@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Hub - Register</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border: 1px solid #007BFF;
+            outline: none;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>University Hub</h1>
+        <nav>
+<a href="sabout.html" id="sabout">about</a>
+
+       <a href="saddmission.html" id="saddmission">addmission</a>
+      <a href="scontact.html" id="scontact">contactme</a>
+      <a href="scourse.html" id="scourse">course</a>
+
+        <a href="sevent.html" id="sevent">event</a>
+      <a href="sblog.html" id="sblog">blog</a>
+          <a href="sregister.html" id="sregister">register</a>
+      <a href="ssignin.html" id="ssignin">sign_in</a>
+      <a href="sforget.html" id="sforget">forget</a>
+
+        
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <div class="link">
+                <p>Already have an account? <a href="#">Login here</a></p>
+                <li><a href="#">Contact</a></li>
+              </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 University Hub</p>
+    </footer>
+    <script>
+        // JavaScript Code
+        document.getElementById('registerForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Perform registration logic here (e.g., send data to server)
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Password:', password);
+
+            // Reset the form
+            event.target.reset();
+            alert('Registration successful!'); // Simple alert for feedback
+        });
+    </script>
+</body>
+</html>
